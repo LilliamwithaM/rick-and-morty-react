@@ -2,9 +2,9 @@
 name: master CI, CD workflow 
 on: 
   push:
-    branches: [ "develop"]
+    branches: [ "rick-morty"]
   pull_request:
-    branches: [ "develop"]
+    branches: [ "rick-morty"]
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -25,7 +25,7 @@ jobs:
           envkey_NG_APP_KEY : ${{ secrets.OPENAI_KEY }}
           file_name: .env
           fail_on_empty: false
-          
+
       - name: build angular, output in dist/openai
         run: |
           npm run build
@@ -57,7 +57,7 @@ jobs:
           
       - name: Docker Push
         run: docker push ${{secrets.DOCKER_USER}}/${{secrets.MODEL_NAME}}:${{github.sha}}
-      
+
       - name: update docker user in k8 
         run: sed -i 's/{docker_user}/${{secrets.DOCKER_USER}}/g' manifests/k8s.yaml
 
