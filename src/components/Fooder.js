@@ -5,10 +5,10 @@ export const Footer = () => {
         <div class="container">
         <footer class="py-3 my-4">
             <ul class="nav col-md-4 justify-content-end">
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Lilliam Romero Reyes</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">zS20006765</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Ingenieria de Software</a></li>
-            <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Universidad Veracruzana</a></li>
+            <li class="nav-item">Lilliam Romero Reyes</li>
+            <li class="nav-item">zS20006765</li>
+            <li class="nav-item">Ingenieria de Software</li>
+            <li class="nav-item">Universidad Veracruzana</li>
             </ul>
             <p class="text-center text-muted">Proyecto Rick and Morty API</p>
         </footer>
