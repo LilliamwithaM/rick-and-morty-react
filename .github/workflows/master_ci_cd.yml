@@ -1,4 +1,4 @@
-name: masteer CI, CD workflow 
+name: master CI, CD workflow 
 on: 
   push:
     branches: [ "master"]
@@ -82,4 +82,4 @@ jobs:
         with:
           namespace: ${{secrets.OKTETO_NAMESPACE }}
           manifest: manifests/k8s.yaml
-          tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAMES}}:${{github.sha}}
+          tag: ${{ secrets.DOCKER_USERNAME }}/${{secrets.MODEL_NAME}}:${{github.sha}}
