@@ -63,6 +63,9 @@ jobs:
       - name: update model name in k8 
         run: sed -i 's/{model_names}/${{secrets.MODEL_NAMES}}/g' manifests/k8s.yaml
 
+      - name: update model nodo in k8 
+        run: sed -i 's/{nodo}/${{secrets.NODO}}/g' manifests/k8s.yaml
+        
       - name: update _ by - 
         run: sed -i 's/_/-/g' manifests/k8s.yaml
 
