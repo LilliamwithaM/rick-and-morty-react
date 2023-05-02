@@ -11,7 +11,7 @@ spec:
 =======
       app: {model_names}-server
 >>>>>>> 496269a1649a671ed6334ce7eeb90e9287268362
-  replicas: {nodo}
+  replicas: {nodos}
   template:
     metadata:
       labels:
