@@ -1,4 +1,3 @@
-#manifest master
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -6,12 +5,8 @@ metadata:
 spec:
   selector:
     matchLabels:
-<<<<<<< HEAD
       app: {model_name}-server
-=======
-      app: {model_names}-server
->>>>>>> 496269a1649a671ed6334ce7eeb90e9287268362
-  replicas: {nodos}
+  replicas: {nodo}
   template:
     metadata:
       labels:
@@ -19,7 +14,6 @@ spec:
     spec:
       containers:
       - name: {model_name}-container
-        #image: gcr.io/tensorflow-serving/resnet 
         image: docker.io/{docker_user}/{model_name}:{github.sha}
         ports:
         - containerPort: 80
